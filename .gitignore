@@ -1,0 +1,51 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# User-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / IntelliJ
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Core / Blazor
+wwwroot/lib/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+appsettings.Local.json
+secrets.json
+
+# Test results
+TestResults/
+coverage/
+*.trx
+
+# Publish output
+publish/

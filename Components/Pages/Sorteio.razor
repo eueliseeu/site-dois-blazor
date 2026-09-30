@@ -1,0 +1,16 @@
+@page "/sorteio"
+@rendermode InteractiveServer
+
+<h1>Sorteador de Números</h1>
+<h2>@numeroSorteado</h2>
+<button type="button" @onclick="SortearNumero" style="padding: 10px;" class="btn btn-primary">Sortear Numero</button>
+
+@code {
+  private int numeroSorteado;
+  private Random random = new Random();
+
+  private void SortearNumero()
+  {
+    numeroSorteado = random.Next(1, 1000);
+  }
+}

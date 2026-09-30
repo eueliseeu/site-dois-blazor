@@ -1,0 +1,23 @@
+@page "/conversor"
+@rendermode InteractiveServer
+
+<h1>Conversor para Temperatura</h1>
+<input type="text" style="padding: 10px; width: 100%; margin-bottom: 10px;" @bind="celsius" placeholder="Digite um número para conversão" />
+<button @onclick="Converter" class="btn btn-primary" style="padding: 10px;">Fazer a conversão</button>
+
+@code {
+    private string celsius = string.Empty;
+
+    private void Converter()
+    {
+        if (double.TryParse(celsius, out double celsiusValue))
+        {
+            double fahrenheitValue = (celsiusValue * 9 / 5) + 32;
+            celsius = $"{fahrenheitValue} °F";
+        }
+        else
+        {
+            celsius = "Invalid input";
+        }
+    }
+}
